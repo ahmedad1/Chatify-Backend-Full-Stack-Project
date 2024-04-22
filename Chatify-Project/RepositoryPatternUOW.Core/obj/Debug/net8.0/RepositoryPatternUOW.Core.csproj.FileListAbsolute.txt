@@ -1,0 +1,11 @@
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\bin\Debug\net8.0\RepositoryPatternUOW.Core.deps.json
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\bin\Debug\net8.0\RepositoryPatternUOW.Core.dll
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\bin\Debug\net8.0\RepositoryPatternUOW.Core.pdb
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\RepositoryPatternUOW.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\RepositoryPatternUOW.Core.AssemblyInfoInputs.cache
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\RepositoryPatternUOW.Core.AssemblyInfo.cs
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\RepositoryPatternUOW.Core.csproj.CoreCompileInputs.cache
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\RepositoryPatternUOW.Core.dll
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\refint\RepositoryPatternUOW.Core.dll
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\RepositoryPatternUOW.Core.pdb
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Debug\net8.0\ref\RepositoryPatternUOW.Core.dll

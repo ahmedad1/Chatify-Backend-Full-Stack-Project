@@ -1,0 +1,6 @@
+@Chatify_HostAddress = http://localhost:5263
+
+GET {{Chatify_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
