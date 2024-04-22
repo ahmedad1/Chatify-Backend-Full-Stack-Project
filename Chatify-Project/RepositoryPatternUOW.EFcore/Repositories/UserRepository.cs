@@ -78,10 +78,10 @@ namespace RepositoryPatternUOW.EFcore.Repositories
 
         public async Task<SignUpResult> SignUpAsync(SignUpDto signUpDto)
         {
-           if(await context.Users.AnyAsync(x => x.UserName == signUpDto.UserName))
-                return new(false, false, true);
            if(await context.Users.AnyAsync(x => x.Email == signUpDto.Email))
                 return new(false, true, false);
+           if(await context.Users.AnyAsync(x => x.UserName == signUpDto.UserName))
+                return new(false, false, true);
             User user =mapToModel.MapSignUpDto(signUpDto);
             user.Password=BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password);
             await context.Users.AddAsync(user);

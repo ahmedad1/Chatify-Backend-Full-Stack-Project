@@ -19,9 +19,9 @@ namespace Chatify.Controllers
            return result.Success? Ok(result) : BadRequest(result);
         }
         [HttpPost("code/send")]
-        public async Task<IActionResult> SendCode([FromBody]string email)
+        public async Task<IActionResult> SendCode(EmailDto email)
         {
-            var result = await userRepository.SendVerificationCodeAsync(email);
+            var result = await userRepository.SendVerificationCodeAsync(email.email);
             return result? Ok():NotFound();
         }
         [HttpPost("code/verify")]

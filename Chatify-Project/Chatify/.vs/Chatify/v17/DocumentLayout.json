@@ -3,18 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59804166-37EF-47B6-9C39-E6B8D12BCCB0}|..\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj|c:\\users\\infotech\\desktop\\chatify-project\\repositorypatternuow.efcore\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F878963C-B697-4ED7-829A-4C2AFEDDA4B5}|Chatify.csproj|c:\\users\\infotech\\desktop\\chatify-project\\chatify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F878963C-B697-4ED7-829A-4C2AFEDDA4B5}|Chatify.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F878963C-B697-4ED7-829A-4C2AFEDDA4B5}|Chatify.csproj|c:\\users\\infotech\\desktop\\chatify-project\\chatify\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F878963C-B697-4ED7-829A-4C2AFEDDA4B5}|Chatify.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4891C647-E0CF-4FFB-8DEB-5BD767FC18C6}|..\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj|c:\\users\\infotech\\desktop\\chatify-project\\repositorypatternuow.core\\dtos\\emaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59804166-37EF-47B6-9C39-E6B8D12BCCB0}|..\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj|c:\\users\\infotech\\desktop\\chatify-project\\repositorypatternuow.efcore\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4891C647-E0CF-4FFB-8DEB-5BD767FC18C6}|..\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj|c:\\users\\infotech\\desktop\\chatify-project\\repositorypatternuow.core\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4891C647-E0CF-4FFB-8DEB-5BD767FC18C6}|..\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj|c:\\users\\infotech\\desktop\\chatify-project\\repositorypatternuow.core\\resultmodels\\signupresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F878963C-B697-4ED7-829A-4C2AFEDDA4B5}|Chatify.csproj|c:\\users\\infotech\\desktop\\chatify-project\\chatify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F878963C-B697-4ED7-829A-4C2AFEDDA4B5}|Chatify.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4891C647-E0CF-4FFB-8DEB-5BD767FC18C6}|..\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj|c:\\users\\infotech\\desktop\\chatify-project\\repositorypatternuow.core\\resultmodels\\loginresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -27,11 +33,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmailDto.cs",
+              "DocumentMoniker": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\DTOs\\EmailDto.cs",
+              "RelativeDocumentMoniker": "..\\RepositoryPatternUOW.Core\\DTOs\\EmailDto.cs",
+              "ToolTip": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\DTOs\\EmailDto.cs",
+              "RelativeToolTip": "..\\RepositoryPatternUOW.Core\\DTOs\\EmailDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:48:56.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "SignUpResult.cs",
+              "DocumentMoniker": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\ResultModels\\SignUpResult.cs",
+              "RelativeDocumentMoniker": "..\\RepositoryPatternUOW.Core\\ResultModels\\SignUpResult.cs",
+              "ToolTip": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\ResultModels\\SignUpResult.cs",
+              "RelativeToolTip": "..\\RepositoryPatternUOW.Core\\ResultModels\\SignUpResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:15:47.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "LoginResult.cs",
               "DocumentMoniker": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\ResultModels\\LoginResult.cs",
               "RelativeDocumentMoniker": "..\\RepositoryPatternUOW.Core\\ResultModels\\LoginResult.cs",
@@ -49,39 +81,40 @@
               "RelativeDocumentMoniker": "..\\RepositoryPatternUOW.Core\\Interfaces\\IUserRepository.cs",
               "ToolTip": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\Interfaces\\IUserRepository.cs",
               "RelativeToolTip": "..\\RepositoryPatternUOW.Core\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAASwAwAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T17:37:10.029Z"
+              "WhenOpened": "2024-04-19T17:37:10.029Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAD4v0MAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T17:36:32.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "..\\RepositoryPatternUOW.EFcore\\Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "..\\RepositoryPatternUOW.EFcore\\Repositories\\UserRepository.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAYwDYAAAA5AAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAMwCgAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T17:22:04.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -89,8 +122,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAADQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T17:21:04.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T17:21:04.798Z"
             }
           ]
         },

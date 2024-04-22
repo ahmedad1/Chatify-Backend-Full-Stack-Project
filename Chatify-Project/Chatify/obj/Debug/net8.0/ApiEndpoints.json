@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "email",
-        "Type": "System.String",
+        "Type": "RepositoryPattern.Core.DTOs.EmailDto",
         "IsRequired": true
       }
     ],
