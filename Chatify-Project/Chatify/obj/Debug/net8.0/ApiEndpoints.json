@@ -49,6 +49,16 @@
   },
   {
     "ContainingType": "Chatify.Controllers.AccountController",
+    "Method": "SignOut",
+    "RelativePath": "api/Account/sign-out",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.AccountController",
     "Method": "SignUp",
     "RelativePath": "api/Account/sign-up",
     "HttpMethod": "POST",

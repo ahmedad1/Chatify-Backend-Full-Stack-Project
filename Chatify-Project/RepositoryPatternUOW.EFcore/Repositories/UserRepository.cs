@@ -76,6 +76,12 @@ namespace RepositoryPatternUOW.EFcore.Repositories
             
         }
 
+        public async Task<bool> SignOutAsync(string refToken)
+        {
+            var result = await context.RefreshTokens.Where(x=>x.Token==refToken).ExecuteDeleteAsync();
+            return result > 0;
+        }
+
         public async Task<SignUpResult> SignUpAsync(SignUpDto signUpDto)
         {
            if(await context.Users.AnyAsync(x => x.Email == signUpDto.Email))

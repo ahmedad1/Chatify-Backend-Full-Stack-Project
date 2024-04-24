@@ -62,6 +62,25 @@ namespace Chatify.Controllers
             Response.Cookies.Append(key,value,cookieOptions);
             
         }
+        [HttpDelete("sign-out")]
+        public async Task<IActionResult> SignOut()
+        {
+            if (!Request.Cookies.TryGetValue("refreshToken", out string? val))
+                return NotFound();
+            var result = await userRepository.SignOutAsync(val);
+            if (result) {
+                SetCookie("jwt", "", DateTime.Now.AddMinutes(-20), true);
+                SetCookie("refreshToken", "", DateTime.Now.AddHours(-20), true);
+                SetCookie("userName", "", DateTime.Now.AddHours(-20));
+                SetCookie("email", "", DateTime.Now.AddHours(-20));
+                SetCookie("firstName","", DateTime.Now.AddHours(-20));
+                SetCookie("lastName","", DateTime.Now.AddHours(-20));
+                SetCookie("id","", DateTime.Now.AddHours(-20));
+                return Ok(); 
+            }
+            return NotFound();
+
+        }
 
     }
 }

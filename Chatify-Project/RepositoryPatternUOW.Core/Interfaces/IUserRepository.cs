@@ -11,6 +11,7 @@ namespace RepositoryPatternUOW.Core.Interfaces
         public Task<bool> SendVerificationCodeAsync(string email);
         public Task<bool>VerifyCodeAsync(string email, string code);
         public Task<LoginResult>LoginAsync(LoginDto loginDto);
+        public Task<bool> SignOutAsync(string refToken);
        
     }
 }
