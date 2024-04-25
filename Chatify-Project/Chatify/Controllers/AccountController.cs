@@ -47,7 +47,7 @@ namespace Chatify.Controllers
                 return Ok(new {Success=true,EmailConfirmed=true});
             }else if(result is { Success: true })
             {
-                return Ok(new { Success = true, EmailConfirmed = false });
+                return Ok(new { Success = true, EmailConfirmed = false,result.Email });
             } 
 
             return NotFound();

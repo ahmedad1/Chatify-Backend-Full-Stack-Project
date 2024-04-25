@@ -23,7 +23,7 @@ namespace RepositoryPatternUOW.EFcore.Repositories
             if (user is null || !BCrypt.Net.BCrypt.EnhancedVerify(loginDto.Password, user.Password)) 
                 return new();
             if(!user.EmailConfirmed)
-                return new(true);
+                return new(true,false,null , null , user.Email);
             var jwt = generateTokens.GenerateToken(user);
             var refreshToken = generateTokens.GenerateToken();
             context.ChangeTracker.LazyLoadingEnabled = true;
