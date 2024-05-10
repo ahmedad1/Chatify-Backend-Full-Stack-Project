@@ -12,7 +12,7 @@ using RepositoryPatternUOW.EFcore;
 namespace RepositoryPattern.EFcore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240419130607_Mig")]
+    [Migration("20240510154105_Mig")]
     partial class Mig
     {
         /// <inheritdoc />
@@ -27,6 +27,75 @@ namespace RepositoryPattern.EFcore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("RepositoryPattern.Core.Models.FriendRequest", b =>
+                {
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecipientId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SenderId", "RecipientId");
+
+                    b.HasIndex("RecipientId");
+
+                    b.ToTable("FriendRequest");
+                });
+
+            modelBuilder.Entity("RepositoryPattern.Core.Models.IdentityTokenVerification", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Token")
+                        .HasMaxLength(44)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(44)");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UserId", "Token");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("IdentityTokenVerifications");
+                });
+
+            modelBuilder.Entity("RepositoryPattern.Core.Models.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("GroupId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("MessageText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ReceiverId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Message");
+                });
 
             modelBuilder.Entity("RepositoryPattern.Core.Models.VerificationCode", b =>
                 {
@@ -151,6 +220,63 @@ namespace RepositoryPattern.EFcore.Migrations
                     b.ToTable("UserGroup");
                 });
 
+            modelBuilder.Entity("RepositoryPattern.Core.Models.FriendRequest", b =>
+                {
+                    b.HasOne("RepositoryPatternUOW.Core.Models.User", "Recipient")
+                        .WithMany("RecievedRequests")
+                        .HasForeignKey("RecipientId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
+                    b.HasOne("RepositoryPatternUOW.Core.Models.User", "Sender")
+                        .WithMany("SentRequests")
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipient");
+
+                    b.Navigation("Sender");
+                });
+
+            modelBuilder.Entity("RepositoryPattern.Core.Models.IdentityTokenVerification", b =>
+                {
+                    b.HasOne("RepositoryPatternUOW.Core.Models.User", "User")
+                        .WithOne("IdentityTokenVerification")
+                        .HasForeignKey("RepositoryPattern.Core.Models.IdentityTokenVerification", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("RepositoryPattern.Core.Models.Message", b =>
+                {
+                    b.HasOne("RepositoryPatternUOW.Core.Models.Group", "Group")
+                        .WithMany("Messages")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RepositoryPatternUOW.Core.Models.User", "Receiver")
+                        .WithMany("ReceivedMessages")
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
+                    b.HasOne("RepositoryPatternUOW.Core.Models.User", "Sender")
+                        .WithMany("SentMessages")
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("RepositoryPattern.Core.Models.VerificationCode", b =>
                 {
                     b.HasOne("RepositoryPatternUOW.Core.Models.User", "User")
@@ -199,9 +325,25 @@ namespace RepositoryPattern.EFcore.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("RepositoryPatternUOW.Core.Models.Group", b =>
+                {
+                    b.Navigation("Messages");
+                });
+
             modelBuilder.Entity("RepositoryPatternUOW.Core.Models.User", b =>
                 {
+                    b.Navigation("IdentityTokenVerification")
+                        .IsRequired();
+
+                    b.Navigation("ReceivedMessages");
+
+                    b.Navigation("RecievedRequests");
+
                     b.Navigation("RefreshTokens");
+
+                    b.Navigation("SentMessages");
+
+                    b.Navigation("SentRequests");
 
                     b.Navigation("UserConnections");
 

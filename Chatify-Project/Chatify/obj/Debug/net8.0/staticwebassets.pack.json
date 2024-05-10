@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\asset-manifest.json",
+      "PackagePath": "staticwebassets\\asset-manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\logo192.png",
+      "PackagePath": "staticwebassets\\logo192.png"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\logo512.png",
+      "PackagePath": "staticwebassets\\logo512.png"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\robots.txt",
+      "PackagePath": "staticwebassets\\robots.txt"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.8e46ed7a.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.8e46ed7a.css"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.8e46ed7a.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.8e46ed7a.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\453.c69361ea.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\453.c69361ea.chunk.js"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\453.c69361ea.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\453.c69361ea.chunk.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.92c480c5.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.92c480c5.js"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.92c480c5.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.92c480c5.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.92c480c5.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.92c480c5.js.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Chatify.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Chatify.props",
+      "PackagePath": "build\\Chatify.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Chatify.props",
+      "PackagePath": "buildMultiTargeting\\Chatify.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Chatify.props",
+      "PackagePath": "buildTransitive\\Chatify.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

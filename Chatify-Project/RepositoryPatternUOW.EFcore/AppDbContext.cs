@@ -14,6 +14,7 @@ namespace RepositoryPatternUOW.EFcore
         public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<UserConnection> UserConnections { get; set; }
+        public DbSet<IdentityTokenVerification> IdentityTokenVerifications { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<VerificationCode> VerifcationCodes { get; set; }
         public AppDbContext(DbContextOptions options):base(options)
@@ -35,7 +36,16 @@ namespace RepositoryPatternUOW.EFcore
                 x.Property(p => p.Password).HasMaxLength(100);
                 x.HasIndex(p => p.Email);
                 x.HasIndex(p => p.UserName);
+                x.HasMany(x => x.SentRequests).WithOne(x => x.Sender).HasForeignKey(x => x.SenderId).OnDelete(DeleteBehavior.ClientCascade);
+                x.HasMany(x => x.RecievedRequests).WithOne(x => x.Recipient).HasForeignKey(x => x.RecipientId).OnDelete(DeleteBehavior.ClientCascade);
+                x.HasMany(x => x.SentMessages).WithOne(x => x.Sender).HasForeignKey(x => x.SenderId).OnDelete(DeleteBehavior.ClientCascade);
+                x.HasMany(x => x.ReceivedMessages).WithOne(x => x.Receiver).HasForeignKey(x => x.ReceiverId).OnDelete(DeleteBehavior.ClientCascade);
 
+
+            });
+            modelBuilder.Entity<FriendRequest>(x =>
+            {
+                x.HasKey(x => new { x.SenderId, x.RecipientId });
             });
             modelBuilder.Entity<RefreshToken>(x =>
             {
@@ -51,12 +61,20 @@ namespace RepositoryPatternUOW.EFcore
             modelBuilder.Entity<Group>(x =>
             {
                 x.Property(x => x.Id).HasMaxLength(255);
+                x.HasMany(x => x.Messages).WithOne(x => x.Group).HasForeignKey(x => x.GroupId);
                 
             });
             modelBuilder.Entity<VerificationCode>(x =>
             {
                 x.HasKey(k => new {k.Code,k.UserId});
             }) ;
+            modelBuilder.Entity<IdentityTokenVerification>(x =>
+            {
+
+                x.HasOne(p => p.User).WithOne(p => p.IdentityTokenVerification).HasForeignKey<IdentityTokenVerification>(p => p.UserId);
+                x.Property(p => p.Token).HasMaxLength(44).IsUnicode(false);
+                x.HasKey(k => new { k.UserId, k.Token });
+            });
         }
 
     }

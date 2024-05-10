@@ -1,39 +1,49 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Chatify.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using RepositoryPattern.Core.DTOs;
 using RepositoryPattern.Core.OptionPattern;
 using RepositoryPatternUOW.Core.DTOs;
-using RepositoryPatternUOW.Core.Interfaces;
+
 
 namespace Chatify.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController(IUserRepository userRepository,JwtOptions jwtOptions,IOptions<RefreshTokenOptions> refreshTokenOptions) : ControllerBase
+    public class AccountController(IAuthenticationService authenticationService,JwtOptions jwtOptions,IOptions<RefreshTokenOptions> refreshTokenOptions) : ControllerBase
     {
         [HttpPost("sign-up")]
         public async Task<IActionResult> SignUp(SignUpDto signUpDto)
         {
-           var result= await userRepository.SignUpAsync(signUpDto);
+           var result= await authenticationService.SignUpAsync(signUpDto);
            return result.Success? Ok(result) : BadRequest(result);
         }
         [HttpPost("code/send")]
         public async Task<IActionResult> SendCode(EmailDto email)
         {
-            var result = await userRepository.SendVerificationCodeAsync(email.email);
-            return result? Ok():NotFound();
+            var result = await authenticationService.SendVerificationCodeAsync(email.email);
+            if (result.Success)
+            {
+                SetCookie("identityToken", result.Token!, DateTime.Now.AddMinutes(25), true);
+                return Ok();
+            }
+            else
+                return NotFound();
         }
         [HttpPost("code/verify")]
         public async Task<IActionResult> VerifyCode(VerifyCodeDto verifyCodeDto)
         {
-            var result = await userRepository.VerifyCodeAsync(verifyCodeDto.Email, verifyCodeDto.Code);
+            if (!Request.Cookies.TryGetValue("identityToken", out string? token))
+                return NotFound();
+            var result = await authenticationService.VerifyCodeAsync(verifyCodeDto.Email, verifyCodeDto.Code,token);
             return result? Ok():NotFound();
         }
         [HttpPost("login")]
         public async Task<IActionResult>Login(LoginDto loginDto)
         {
-            var result=await userRepository.LoginAsync(loginDto);
+            var result=await authenticationService.LoginAsync(loginDto);
             if(result is { Success:true ,EmailConfirmed:true})
             {
                 SetCookie("jwt", result.Jwt!,DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter),true);
@@ -62,12 +72,13 @@ namespace Chatify.Controllers
             Response.Cookies.Append(key,value,cookieOptions);
             
         }
+        [Authorize]
         [HttpDelete("sign-out")]
         public async Task<IActionResult> SignOut()
         {
             if (!Request.Cookies.TryGetValue("refreshToken", out string? val))
                 return NotFound();
-            var result = await userRepository.SignOutAsync(val);
+            var result = await authenticationService.SignOutAsync(val);
             if (result) {
                 SetCookie("jwt", "", DateTime.Now.AddMinutes(-20), true);
                 SetCookie("refreshToken", "", DateTime.Now.AddHours(-20), true);
@@ -81,6 +92,20 @@ namespace Chatify.Controllers
             return NotFound();
 
         }
-
+        [HttpPost("tokens")]
+        public async Task<IActionResult> GetNewTokens()
+        {
+            if(!Request.Cookies.TryGetValue("refreshToken",out string? refToken)||!Request.Cookies.TryGetValue("email",out string? email))
+                return Unauthorized();
+            var result = await authenticationService.GetNewTokens(email, refToken);
+            if (result.Success)
+            {
+                SetCookie("jwt", result.Jwt!,DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter),true,true);
+                SetCookie("refreshToken", result.RefreshToken!,DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter),true,true);
+                return Ok();
+            }
+            return Unauthorized();
+            
+        }
     }
 }

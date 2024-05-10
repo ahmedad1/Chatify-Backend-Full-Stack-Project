@@ -72,5 +72,131 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.AccountController",
+    "Method": "GetNewTokens",
+    "RelativePath": "api/Account/tokens",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.ChatController",
+    "Method": "Get",
+    "RelativePath": "api/Chat/group/{group}/messages/page/{pageNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "group",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.ChatController",
+    "Method": "GetGroups",
+    "RelativePath": "api/Chat/groups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.FriendRequestController",
+    "Method": "SendFriendRequest",
+    "RelativePath": "api/FriendRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "friendRequestDto",
+        "Type": "RepositoryPattern.Core.DTOs.FriendRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.FriendRequestController",
+    "Method": "CancelRequest",
+    "RelativePath": "api/FriendRequest",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "friendRequestDto",
+        "Type": "RepositoryPattern.Core.DTOs.FriendRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.FriendRequestController",
+    "Method": "Get",
+    "RelativePath": "api/FriendRequest/page/{pageNum}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNum",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.FriendRequestController",
+    "Method": "Search",
+    "RelativePath": "api/FriendRequest/people/{pageNum}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNum",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chatify.Controllers.FriendRequestController",
+    "Method": "Response",
+    "RelativePath": "api/FriendRequest/response",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "response",
+        "Type": "RepositoryPattern.Core.DTOs.ResponseFriendRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

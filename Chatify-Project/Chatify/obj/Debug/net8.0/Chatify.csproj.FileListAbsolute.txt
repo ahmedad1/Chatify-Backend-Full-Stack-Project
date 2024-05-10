@@ -146,3 +146,4 @@ C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPat
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPattern.EFcore.pdb
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\obj\Debug\net8.0\Chatify.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\Chatify.staticwebassets.runtime.json
