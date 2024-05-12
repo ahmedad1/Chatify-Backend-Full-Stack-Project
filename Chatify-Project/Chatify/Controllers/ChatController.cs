@@ -23,11 +23,12 @@ namespace Chatify.Controllers
         }
         
         [HttpGet("groups")]
-        public IActionResult GetGroups()
+        public async Task<IActionResult> GetGroups()
         {
             int id = int.Parse(JwtHandler.ExtractPayload(Request)[JwtRegisteredClaimNames.NameId].ToString()!);
+            bool hasFriendRequests =await unitOfWork.FriendRequestRepository.ExistsAsync(x => x.RecipientId == id);
             var result =  unitOfWork.GroupRepository.GetWhere(x => x.Users.Any(x => x.Id == id), null, ["Users"]);
-            return Ok(result.Select(x => new { x.Id, Users = x.Users.Where(x=>x.Id!=id).Select(u => new { u.UserName, u.FirstName, u.LastName })}));
+            return Ok(new { HasFriendRequests = hasFriendRequests, groups =result.Select(x => new { x.Id, Users = x.Users.Where(x => x.Id != id).Select(u => new { u.UserName, u.FirstName, u.LastName }) }) });
         }
         
     }

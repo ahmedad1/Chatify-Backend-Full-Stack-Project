@@ -14,6 +14,7 @@ namespace RepositoryPattern.Core.ResultModels
            public string UserName { get; set; }
            public string FirstName { get; set; }
            public string LastName { get; set; }
-           public bool GotRequest { get; set; } = false; 
-}
+           public bool GotRequest { get; set; } = false;
+           public bool SentRequest { get; set; } = false;
+    }
 }

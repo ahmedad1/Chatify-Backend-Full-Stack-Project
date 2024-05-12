@@ -39,7 +39,9 @@ namespace Chatify.Controllers
      
             var recevier = await unitOfWork.UserRepository.GetOneByAsync(x => x.UserName == friendRequestDto.UserName);
             if (recevier is null) return BadRequest();
-            if (recevier!.Groups!.Any(x => x.Users.Any(x => x.UserName == userName)))
+            if (recevier!.Groups!.Any(x => x.Users.Any(x => x.UserName == userName))
+                ||await unitOfWork.FriendRequestRepository.ExistsAsync(x=>x.SenderId==id&&x.RecipientId==recevier.Id||x.SenderId==recevier.Id&&x.RecipientId==id)
+                )
                 return BadRequest();
 
             var request = new FriendRequest() { RecipientId = recevier.Id, SenderId =id };
@@ -74,7 +76,7 @@ namespace Chatify.Controllers
             if (!connectionIdsOfReceipant.IsNullOrEmpty())
                 for (int i = 0; i < connectionIdsOfReceipant.Count(); i++)
                 {
-                    await chatHub.Clients.Client(connectionIdsOfReceipant[i].ConnectionId).SendAsync("friendRequestCanceled", userName);
+                    await chatHub.Clients.Client(connectionIdsOfReceipant[i].ConnectionId).SendAsync("friendRequestCancelled", userName);
                 }
 
             return Ok();
@@ -113,7 +115,7 @@ namespace Chatify.Controllers
                             await chatHub.Groups.AddToGroupAsync(connections[i].ConnectionId, newGroup);
                             if (p == users.Length - 1)
                             {
-                                await chatHub.Clients.Client(connections[i].ConnectionId).SendAsync("requestAccepted", user1.UserName, user1.FirstName, user1.LastName);
+                                await chatHub.Clients.Client(connections[i].ConnectionId).SendAsync("requestAccepted", user1.UserName, user1.FirstName, user1.LastName,newGroup);
                             }
                         }
                     }
@@ -143,6 +145,8 @@ namespace Chatify.Controllers
                 {
                         users[i].GotRequest = true;
                 }
+                if (user.RecievedRequests is not null && user.RecievedRequests.Any(x => x.SenderId == users[i].Id))
+                    users[i].SentRequest = true;
             }
             
             return Ok(users);
