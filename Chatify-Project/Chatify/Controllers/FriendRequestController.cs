@@ -20,11 +20,11 @@ namespace Chatify.Controllers
     public class FriendRequestController(IUnitOfWork unitOfWork, IHubContext<ChatHub> chatHub) : ControllerBase
     {
         [HttpGet("page/{pageNum}")]
-        public IActionResult Get(int pageNum)
+        public async Task<IActionResult> Get(int pageNum)
         {
             int id = int.Parse(JwtHandler.ExtractPayload(Request)[JwtRegisteredClaimNames.NameId].ToString()!);
 
-            var result = unitOfWork.FriendRequestRepository.GetWhere(x => x.RecipientId == id, pageNum, ["Sender"]);
+            var result =await unitOfWork.FriendRequestRepository.GetWhere(x => x.RecipientId == id, pageNum, ["Sender"]);
             return Ok(result.Select(x => new { x.Sender.FirstName, x.Sender.LastName, x.Sender.UserName }));
 
         }
@@ -46,7 +46,7 @@ namespace Chatify.Controllers
 
             var request = new FriendRequest() { RecipientId = recevier.Id, SenderId =id };
             await unitOfWork.FriendRequestRepository.AddAsync(request);
-            var connectionIdsOfReceipant = unitOfWork.UserConnectionRepository.GetWhere(x => x.User.UserName == friendRequestDto.UserName).ToList();
+            var connectionIdsOfReceipant = (await unitOfWork.UserConnectionRepository.GetWhere(x => x.User.UserName == friendRequestDto.UserName)).ToList();
             if (!connectionIdsOfReceipant.IsNullOrEmpty())
             {
                 for (int i = 0; i < connectionIdsOfReceipant.Count(); i++) {
@@ -72,7 +72,7 @@ namespace Chatify.Controllers
             var result = await unitOfWork.FriendRequestRepository.ExecuteDeleteAsync(x => x.SenderId == id && x.RecipientId == recipient.Id);
             if (result == 0)
                 return NotFound();
-            var connectionIdsOfReceipant = unitOfWork.UserConnectionRepository.GetWhere(x => x.User.UserName == friendRequestDto.UserName).ToList();
+            var connectionIdsOfReceipant = (await unitOfWork.UserConnectionRepository.GetWhere(x => x.User.UserName == friendRequestDto.UserName)).ToList();
             if (!connectionIdsOfReceipant.IsNullOrEmpty())
                 for (int i = 0; i < connectionIdsOfReceipant.Count(); i++)
                 {
@@ -135,7 +135,7 @@ namespace Chatify.Controllers
             var user = await unitOfWork.UserRepository.GetByIdAsync(id);
             searchKey = searchKey.Trim();
             //last Modification (excepting the friends )
-            var users = unitOfWork.UserRepository.GetWhere(x => (((x.FirstName + " " + x.LastName).Contains(searchKey)) || x.UserName.Contains(searchKey)) && x.EmailConfirmed == true && x.Id != id&&!x.Groups.Any(g=>g.Users.Any(u=>u.Id==user.Id)), pageNum)
+            var users =(await unitOfWork.UserRepository.GetWhere(x => (((x.FirstName + " " + x.LastName).Contains(searchKey)) || x.UserName.Contains(searchKey)) && x.EmailConfirmed == true && x.Id != id&&!x.Groups.Any(g=>g.Users.Any(u=>u.Id==user.Id)), pageNum))
                 .Select(x => new SearchResult() {Id=x.Id,UserName= x.UserName,FirstName= x.FirstName,LastName= x.LastName,GotRequest = false }).ToList();
             unitOfWork.SetLazyLoading(true);
             if(user.SentRequests is not null)

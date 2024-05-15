@@ -21,7 +21,7 @@ namespace RepositoryPattern.EFcore
         public IBaseRepository<IdentityTokenVerification> IdentityTokenVerificationRepository { get; }
         public IBaseRepository<RefreshToken> RefreshTokenRepository { get; }
 
-        public IBaseRepository<Message> MessageRepository { get; }
+        public IMessageRepository MessageRepository { get; }
 
         public IBaseRepository<FriendRequest> FriendRequestRepository {get;}
 
@@ -34,7 +34,7 @@ namespace RepositoryPattern.EFcore
             IdentityTokenVerificationRepository=new BaseRepository<IdentityTokenVerification>(context);
             RefreshTokenRepository=new BaseRepository<RefreshToken>(context);
             FriendRequestRepository = new BaseRepository<FriendRequest>(context);
-
+            MessageRepository = new MessageRepository(context);
     }
     public async Task SaveChangesAsync()
         {

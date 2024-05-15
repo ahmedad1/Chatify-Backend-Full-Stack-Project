@@ -16,7 +16,7 @@ namespace RepositoryPattern.Core.Interfaces
         IBaseRepository<VerificationCode> VerificationCodeRepository { get; }
         IBaseRepository<IdentityTokenVerification> IdentityTokenVerificationRepository { get; }
         IBaseRepository<RefreshToken> RefreshTokenRepository { get; }
-        IBaseRepository<Message> MessageRepository { get; }
+        IMessageRepository MessageRepository { get; }
         IBaseRepository<FriendRequest> FriendRequestRepository { get; }
 
         public void SetLazyLoading(bool IsEnabled);

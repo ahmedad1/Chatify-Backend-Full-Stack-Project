@@ -16,18 +16,21 @@ namespace Chatify.SignalR
             var userId =int.Parse(JwtHandler.ExtractPayload(Context.GetHttpContext()!.Request)[JwtRegisteredClaimNames.NameId].ToString()!);   
             var user=await unitOfWork.UserRepository.GetByIdAsync(userId);
             user!.UserConnections!.Add(new() { ConnectionId = Context.ConnectionId });
-            var groups = user.Groups?.Select(x=>x.Id).ToList();
+            var groups = user.Groups?.Select(x=>new { x.Id ,Users=x.Users.Where(x => x.Id != userId&&x.UserConnections!.Any())?.Select(x=>x.UserName)}).ToList();
             if (groups is not null)
             {
+            
+                    
                 for (int i = 0; i < groups.Count(); i++)
                 {
-                    await Groups.AddToGroupAsync(Context.ConnectionId, groups[i]);
+                    await Groups.AddToGroupAsync(Context.ConnectionId, groups[i].Id);
 
                 }
                 if (groups.Any())
                 {
-                    await Task.WhenAll(Clients.Groups(groups).SendAsync("isActive", user.UserName, user.FirstName, user.LastName),
-                         unitOfWork.SaveChangesAsync());
+                    await Task.WhenAll(Clients.Groups(groups.Select(x=>x.Id)).SendAsync("newOneActive", user.UserName),
+                     Clients.Caller.SendAsync("allActiveUsers", groups.Select(x => x.Users).FirstOrDefault()),  
+                    unitOfWork.SaveChangesAsync());
                 }
                 else
                     await unitOfWork.SaveChangesAsync();
@@ -55,8 +58,9 @@ namespace Chatify.SignalR
                 Context.Abort();
                 return;
             }
+            int lastMessageId=(int)await unitOfWork.MessageRepository.GetLastId();
             await unitOfWork.MessageRepository.AddAsync(new() {GroupId=groupId,MessageText=message,SenderId=userId,ReceiverId=receiverId.Id });
-            await Task.WhenAll(unitOfWork.SaveChangesAsync(),Clients.OthersInGroup(groupId).SendAsync("newMessage",userName,message));
+            await Task.WhenAll(unitOfWork.SaveChangesAsync(),Clients.OthersInGroup(groupId).SendAsync("newMessage",userName,message,groupId,lastMessageId+1));
 
         }
         public override async Task OnDisconnectedAsync(Exception? exception)

@@ -10,9 +10,14 @@ using System.Threading.Tasks;
 
 namespace RepositoryPattern.EFcore.Repositories
 {
-    public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> where T : class
+    public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-     
+        protected AppDbContext context { get; }
+
+        public BaseRepository(AppDbContext context)
+        {
+            this.context = context;
+        }
 
         public async Task AddAsync(T entity)
         {
@@ -23,7 +28,8 @@ namespace RepositoryPattern.EFcore.Repositories
         {
             return await context.Set<T>().FindAsync(id);
         }
-
+       
+       
         public async Task<T?> GetOneByAsync(Expression<Func<T, bool>> expression, bool track = true, string[]? includes =null)
         {
             context.ChangeTracker.LazyLoadingEnabled = track;
@@ -61,7 +67,7 @@ namespace RepositoryPattern.EFcore.Repositories
         {
             return await context.Set<T>().Where(expression).ExecuteDeleteAsync();
         }
-        public IEnumerable<T> GetWhere(Expression<Func<T, bool>> expression, int? pageNum = null, string[]? includes = null)
+        public async Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> expression, int? pageNum = null, string[]? includes = null,bool getNewestAdded=false,int pageSize=8)
         {
             context.ChangeTracker.LazyLoadingEnabled = false;
             IQueryable<T> result=context.Set<T>();
@@ -74,13 +80,21 @@ namespace RepositoryPattern.EFcore.Repositories
            
             if(pageNum is not null and > 0)
             {
-                int pageSize = 8;
-                int startPoint = pageSize * ((int)pageNum - 1);
-                return result.Where(expression).Skip(startPoint).Take(pageSize).AsNoTracking();
                 
+                int startPoint = pageSize * ((int)pageNum - 1);
+                if (!getNewestAdded)
+                    return result.Where(expression).Skip(startPoint).Take(pageSize).AsNoTracking();
+                else
+                {
+                    var count = await result.CountAsync();
+                    int skipAmount = count - (int)pageNum * pageSize;
+
+                    return result.Where(expression).Skip(skipAmount<0?0:skipAmount).Take(pageSize).AsNoTracking();
+                }
             }
             else
             {
+                
                 return result.Where(expression).AsNoTracking();
             }
         }
