@@ -10,6 +10,7 @@ namespace RepositoryPattern.Core.Interfaces
     public interface IBaseRepository<T>where T : class
     {
         Task<T?> GetByIdAsync(object id);
+        public IQueryable<T> GetListWithTracking(Expression<Func<T, bool>> exp);
         Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> expression, int? pageNum = null, string[]? includes=null,bool getNewestAdded=false,int pageSize=8);
         Task<T?> GetOneByAsync(Expression<Func<T, bool>> expression,bool track=true, string[]? includes=null);
         Task<int>ExecuteDeleteAsync(Expression<Func<T, bool>> expression);

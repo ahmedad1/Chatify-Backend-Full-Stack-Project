@@ -99,5 +99,9 @@ namespace RepositoryPattern.EFcore.Repositories
             }
         }
 
+        public IQueryable<T> GetListWithTracking(Expression<Func<T, bool>> exp)
+        {
+            return context.Set<T>().Where(exp);
+        }
     }
 }

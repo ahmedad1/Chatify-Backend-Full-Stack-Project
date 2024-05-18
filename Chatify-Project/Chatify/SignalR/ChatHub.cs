@@ -47,7 +47,7 @@ namespace Chatify.SignalR
             var userName =payload[JwtRegisteredClaimNames.UniqueName].ToString()!;
             var userId =int.Parse(payload[JwtRegisteredClaimNames.NameId].ToString()!);
             var group=await unitOfWork.GroupRepository.GetByIdAsync(groupId);
-            if (groupId is null)
+            if (group is null)
             {
                 Context.Abort();
                 return;
@@ -60,9 +60,13 @@ namespace Chatify.SignalR
                 return;
             }
             int lastMessageId=(int)await unitOfWork.MessageRepository.GetLastId();
-            await unitOfWork.MessageRepository.AddAsync(new() {GroupId=groupId,MessageText=message,SenderId=userId,ReceiverId=receiverId.Id });
+            await unitOfWork.MessageRepository.AddAsync(new() {GroupId=groupId,MessageText=message,IsRead=false,SenderId=userId,ReceiverId=receiverId.Id });
             await Task.WhenAll(unitOfWork.SaveChangesAsync(),Clients.OthersInGroup(groupId).SendAsync("newMessage",userName,message,groupId,lastMessageId+1));
 
+        }
+        public async Task MakeMessagesRead(string groupId)
+        {
+            await unitOfWork.MessageRepository.MakeAllReadInGroup(groupId);
         }
         public async Task TypingAlert(string groupId)
         {
