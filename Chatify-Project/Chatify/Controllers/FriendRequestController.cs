@@ -74,7 +74,7 @@ namespace Chatify.Controllers
                 return NotFound();
             var connectionIdsOfReceipant = (await unitOfWork.UserConnectionRepository.GetWhere(x => x.User.UserName == friendRequestDto.UserName)).ToList();
             if (!connectionIdsOfReceipant.IsNullOrEmpty())
-                for (int i = 0; i < connectionIdsOfReceipant.Count(); i++)
+                for (int i = 0; i < connectionIdsOfReceipant.Count; i++)
                 {
                     await chatHub.Clients.Client(connectionIdsOfReceipant[i].ConnectionId).SendAsync("friendRequestCancelled", userName);
                 }
@@ -88,10 +88,19 @@ namespace Chatify.Controllers
         [HttpPost("response")]
         public async Task<IActionResult> Response(ResponseFriendRequestDto response)
         {
-            int id = int.Parse(JwtHandler.ExtractPayload(Request)[JwtRegisteredClaimNames.NameId].ToString()!);//who send the response
+            int id = int.Parse(JwtHandler.ExtractPayload(Request)[JwtRegisteredClaimNames.NameId].ToString()!);//who sent the response
             if (!response.IsAccepted)
             {
+                string userName = JwtHandler.ExtractPayload(Request)[JwtRegisteredClaimNames.UniqueName].ToString()!;//who sent the response
                 int result = await unitOfWork.FriendRequestRepository.ExecuteDeleteAsync(x => x.RecipientId == id && x.Sender.UserName == response.UserName);
+                var senderConnections=(await unitOfWork.UserConnectionRepository.GetWhere(x=>x.User.UserName== response.UserName)).ToList();
+                for (int i = 0; i < senderConnections.Count; i++)
+                {
+                    await chatHub.Clients.Client(senderConnections[i].ConnectionId).SendAsync("requestRejected", userName);
+                }
+                //var sendTasks = senderConnections.Select(x => Task.Run(()=>chatHub.Clients.Client(x.ConnectionId).SendAsync("requestRejected", userName)));
+                
+
                 return result > 0 ? Ok() : BadRequest();
             }
             var user2 = await unitOfWork.UserRepository.GetOneByAsync(x => x.UserName == response.UserName);

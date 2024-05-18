@@ -14,6 +14,7 @@ namespace RepositoryPattern.Core.Models
         public int ReceiverId { get; set; }
         public string GroupId { get; set; }
         public string MessageText { get; set; }=null!;
+        public bool IsRead { get; set; }
         public virtual User Sender  { get; set; }=null!;
         public virtual User Receiver { get; set; } = null!;
         public virtual Group Group { get; set; } = null!;

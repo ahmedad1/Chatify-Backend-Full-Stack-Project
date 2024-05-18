@@ -17,6 +17,7 @@ namespace RepositoryPatternUOW.EFcore
         public DbSet<IdentityTokenVerification> IdentityTokenVerifications { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<VerificationCode> VerifcationCodes { get; set; }
+        public DbSet<Message> Messages { get; set; }
         public AppDbContext(DbContextOptions options):base(options)
         {
             
@@ -74,6 +75,10 @@ namespace RepositoryPatternUOW.EFcore
                 x.HasOne(p => p.User).WithOne(p => p.IdentityTokenVerification).HasForeignKey<IdentityTokenVerification>(p => p.UserId);
                 x.Property(p => p.Token).HasMaxLength(44).IsUnicode(false);
                 x.HasKey(k => new { k.UserId, k.Token });
+            });
+            modelBuilder.Entity<Message>(x =>
+            {
+                x.Property(x => x.IsRead).HasDefaultValue(false);
             });
         }
 

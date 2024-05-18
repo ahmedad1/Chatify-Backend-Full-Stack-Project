@@ -70,7 +70,7 @@ namespace RepositoryPattern.EFcore.Repositories
         public async Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> expression, int? pageNum = null, string[]? includes = null,bool getNewestAdded=false,int pageSize=8)
         {
             context.ChangeTracker.LazyLoadingEnabled = false;
-            IQueryable<T> result=context.Set<T>();
+            IQueryable<T> result=context.Set<T>().Where(expression);
             
             if(includes is not null)
                 foreach ( var i in includes)
@@ -83,19 +83,19 @@ namespace RepositoryPattern.EFcore.Repositories
                 
                 int startPoint = pageSize * ((int)pageNum - 1);
                 if (!getNewestAdded)
-                    return result.Where(expression).Skip(startPoint).Take(pageSize).AsNoTracking();
+                    return result.Skip(startPoint).Take(pageSize).AsNoTracking();
                 else
                 {
                     var count = await result.CountAsync();
                     int skipAmount = count - (int)pageNum * pageSize;
 
-                    return result.Where(expression).Skip(skipAmount<0?0:skipAmount).Take(pageSize).AsNoTracking();
+                    return result.Skip(skipAmount<0?0:skipAmount).Take(pageSize).AsNoTracking();
                 }
             }
             else
             {
                 
-                return result.Where(expression).AsNoTracking();
+                return result.AsNoTracking();
             }
         }
 

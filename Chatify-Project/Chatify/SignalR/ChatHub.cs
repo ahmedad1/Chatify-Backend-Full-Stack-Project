@@ -28,8 +28,9 @@ namespace Chatify.SignalR
                 }
                 if (groups.Any())
                 {
+                   
                     await Task.WhenAll(Clients.Groups(groups.Select(x=>x.Id)).SendAsync("newOneActive", user.UserName),
-                     Clients.Caller.SendAsync("allActiveUsers", groups.Select(x => x.Users).FirstOrDefault()),  
+                     Clients.Caller.SendAsync("allActiveUsers", groups.Select(x => x.Users)?.SelectMany(x=>x is not null?x:Enumerable.Empty<string>())),  
                     unitOfWork.SaveChangesAsync());
                 }
                 else
@@ -62,6 +63,12 @@ namespace Chatify.SignalR
             await unitOfWork.MessageRepository.AddAsync(new() {GroupId=groupId,MessageText=message,SenderId=userId,ReceiverId=receiverId.Id });
             await Task.WhenAll(unitOfWork.SaveChangesAsync(),Clients.OthersInGroup(groupId).SendAsync("newMessage",userName,message,groupId,lastMessageId+1));
 
+        }
+        public async Task TypingAlert(string groupId)
+        {
+            var payload = JwtHandler.ExtractPayload(Context.GetHttpContext()!.Request);
+            var userName = payload[JwtRegisteredClaimNames.UniqueName].ToString()!;
+            await Clients.OthersInGroup(groupId).SendAsync("isTyping", userName);
         }
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
