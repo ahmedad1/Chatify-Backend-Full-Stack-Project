@@ -88,8 +88,15 @@ namespace RepositoryPattern.EFcore.Repositories
                 {
                     var count = await result.CountAsync();
                     int skipAmount = count - (int)pageNum * pageSize;
-
-                    return result.Skip(skipAmount<0?0:skipAmount).Take(pageSize).AsNoTracking();
+                    if (count != 0)
+                    {
+                        var finalPagedResult= await result.Skip(skipAmount<0?0:skipAmount).Take(skipAmount<0?(skipAmount+pageSize<0?0: skipAmount + pageSize) :pageSize).AsNoTracking().ToListAsync();
+                        return finalPagedResult;
+                    }
+                    else
+                    {
+                        return Enumerable.Empty<T>();
+                    }
                 }
             }
             else
