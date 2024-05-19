@@ -100,8 +100,15 @@ namespace Chatify.Controllers
             var result = await authenticationService.GetNewTokens(email, refToken);
             if (result.Success)
             {
-                SetCookie("jwt", result.Jwt!,DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter),true,true);
-                SetCookie("refreshToken", result.RefreshToken!,DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter),true,true);
+                //SetCookie("jwt", result.Jwt!,DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter),true,true);
+                //SetCookie("refreshToken", result.RefreshToken!,DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter),true,true);
+                SetCookie("jwt", result.Jwt!, DateTime.Now.AddMinutes(jwtOptions.ExpiresAfter), true);
+                SetCookie("refreshToken", result.RefreshToken!, DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter), true);
+                SetCookie("userName", result.UserName!, DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter));
+                SetCookie("email", result.Email!, DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter));
+                SetCookie("firstName", result.FirstName!, DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter));
+                SetCookie("lastName", result.LastName!, DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter));
+                SetCookie("id", result.Id.ToString()!, DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter));
                 return Ok();
             }
             return Unauthorized();

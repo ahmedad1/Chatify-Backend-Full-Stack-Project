@@ -141,12 +141,13 @@ namespace Chatify.Services
             }
             var newRefToken = generateTokens.GenerateToken();
             var newJwt = generateTokens.GenerateToken(refreshToken.User);
+            var result = new GetNewTokensResult() { Success = true, Jwt = newJwt, RefreshToken = newRefToken, UserName = refreshToken.User.UserName, Email = refreshToken.User.Email, FirstName = refreshToken.User.FirstName, LastName = refreshToken.User.LastName, Id = refreshToken.UserId };
             unitOfWork.RefreshTokenRepository.Remove(refreshToken);
             refreshToken.Token = newRefToken;
             refreshToken.ExpiresAt = DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter);
             await unitOfWork.RefreshTokenRepository.AddAsync(refreshToken);
             await unitOfWork.SaveChangesAsync();
-            return new() { Success=true,Jwt=newJwt,RefreshToken=newRefToken };
+            return result ;
         }
 
     }
