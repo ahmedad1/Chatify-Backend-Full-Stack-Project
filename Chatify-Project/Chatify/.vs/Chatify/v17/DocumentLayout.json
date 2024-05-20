@@ -135,7 +135,7 @@
               "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
               "ToolTip": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\Controllers\\ChatController.cs",
               "RelativeToolTip": "Controllers\\ChatController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAswBMAAAAfAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAADwvx8AAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T15:36:01.078Z",
               "EditorCaption": ""
@@ -148,7 +148,7 @@
               "RelativeDocumentMoniker": "..\\RepositoryPatternUOW.EFcore\\Repositories\\BaseRepository.cs",
               "ToolTip": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\Repositories\\BaseRepository.cs",
               "RelativeToolTip": "..\\RepositoryPatternUOW.EFcore\\Repositories\\BaseRepository.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAADgv1wAAAA0AAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAewFwAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-18T22:21:38.244Z",
               "EditorCaption": ""
@@ -189,8 +189,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAACQAAAAAAAAAAADgvxUAAACGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T17:21:04.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T17:21:04.798Z"
             },
             {
               "$type": "Document",

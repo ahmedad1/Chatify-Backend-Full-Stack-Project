@@ -17,7 +17,7 @@ namespace Chatify.Controllers
             var groupObj =await unitOfWork.GroupRepository.GetByIdAsync(group);
             if (groupObj is null || !groupObj.Users.Any(x => x.Id == id))
                 return Forbid();
-            var result = (await unitOfWork.MessageRepository.GetWhere(x => x.GroupId == group, pageNumber, ["Sender", "Receiver"],true,20)).Select(x => new {x.Id,Message=x.MessageText,IsRead=x.IsRead,UserName=x.Sender.UserName,x.GroupId});
+            var result = (await unitOfWork.MessageRepository.GetWhere(x => x.GroupId == group, pageNumber, ["Sender", "Receiver"],true,20)).Select(x => new {x.Id,Message=x.MessageText,IsRead=x.SenderId==id?true:x.IsRead,UserName=x.Sender.UserName,x.GroupId});
           
             return Ok(result);
           
@@ -31,7 +31,7 @@ namespace Chatify.Controllers
             bool hasFriendRequests =await unitOfWork.FriendRequestRepository.ExistsAsync(x => x.RecipientId == id);
             var result = unitOfWork.GroupRepository.GetListWithTracking(x => x.Users.Any(x => x.Id == id));
             
-            return Ok(new { HasFriendRequests = hasFriendRequests, groups =result.Select(x => new { x.Id,IsRead=x.Messages.Any()?!x.Messages.Any(x=>!x.IsRead):true, Users = x.Users.Where(x => x.Id != id).Select(u => new { u.UserName, u.FirstName, u.LastName }) }) });
+            return Ok(new { HasFriendRequests = hasFriendRequests, groups =result.Select(x => new { x.Id,IsRead=x.Messages.Any()?!x.Messages.Any(x=>!x.IsRead&&x.SenderId!=id):true, Users = x.Users.Where(x => x.Id != id).Select(u => new { u.UserName, u.FirstName, u.LastName }) }) });
         }
         
     }
