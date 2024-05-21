@@ -12,6 +12,7 @@ using RepositoryPattern.EFcore.ExtraServices;
 using RepositoryPattern.EFcore.Repositories;
 using RepositoryPatternUOW.EFcore;
 using RepositoryPatternUOW.EFcore.Mapperly;
+using System.IO.Compression;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -25,7 +26,15 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
 builder.Services.AddScoped<MapToModel>();
 builder.Services.Configure<SenderSerivceOptions>(builder.Configuration.GetSection("MailServices"));
 builder.Services.AddEndpointsApiExplorer();
-
+builder.Services.AddResponseCompression(x =>
+{
+    x.EnableForHttps = true;
+    x.Providers.Add<BrotliCompressionProvider>();
+    x.Providers.Add<GzipCompressionProvider>();
+    x.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(["application/json","application/xml","text/html","text/js"]);
+      
+});
+builder.Services.Configure<BrotliCompressionProviderOptions>(x => x.Level=CompressionLevel.Optimal);
 builder.Services.AddTransient<IUnitOfWork,UnitOfWork>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<ISenderService, SenderService>();
@@ -77,6 +86,7 @@ app.UseAuthorization();
 app.UseMiddleware<RedirectionMiddleware>();
 app.MapHub<ChatHub>("/chat");
 app.UseStaticFiles();
+app.UseResponseCompression();
 app.MapControllers();
 
 app.Run();
