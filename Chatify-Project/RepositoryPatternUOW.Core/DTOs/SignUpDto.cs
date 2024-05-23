@@ -14,13 +14,16 @@ namespace RepositoryPatternUOW.Core.DTOs
         string LastName,
         string UserName,
         string Email,
-        string Password)
+        string Password,
+        string RecaptchaToken
+        )
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.UserName = UserName;
             this.Email = Email;
             this.Password = Password;
+            this.RecaptchaToken = RecaptchaToken;
         }
         [StringLength(100)]
         public string FirstName { get; }
@@ -33,6 +36,7 @@ namespace RepositoryPatternUOW.Core.DTOs
         public string Email { get; }
         [StringLength(100,MinimumLength =8)]
         public string Password { get; }
+        public string RecaptchaToken { get; set; }
     }
    
 }

@@ -43,6 +43,11 @@ namespace Chatify.SignalR
         }
         public async Task SendMessage(string message,string groupId)
         {
+            if (message.Length > 2000)
+            {
+                Context.Abort();
+                return;
+            }
             var payload = JwtHandler.ExtractPayload(Context.GetHttpContext()!.Request);
             var userName =payload[JwtRegisteredClaimNames.UniqueName].ToString()!;
             var userId =int.Parse(payload[JwtRegisteredClaimNames.NameId].ToString()!);

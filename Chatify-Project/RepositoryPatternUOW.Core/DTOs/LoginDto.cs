@@ -9,11 +9,12 @@ namespace RepositoryPattern.Core.DTOs
         public string UserName { get; set; }
         [StringLength(100)]
         public string Password { get; set; }
-
-        public LoginDto( string userName, string password)
+        public string recaptchaToken { get; set; }
+        public LoginDto(string userName, string password, string recaptchaToken)
         {
             Password = password;
             UserName = userName;
+            this.recaptchaToken = recaptchaToken;
         }
     }
    

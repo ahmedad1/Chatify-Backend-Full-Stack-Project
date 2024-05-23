@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using RepositoryPattern.Core.DTOs;
 using RepositoryPattern.Core.OptionPattern;
+using RepositoryPattern.Core.RecaptchaResponseModel;
 using RepositoryPatternUOW.Core.DTOs;
 
 
@@ -12,11 +13,14 @@ namespace Chatify.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController(IAuthenticationService authenticationService,JwtOptions jwtOptions,IOptions<RefreshTokenOptions> refreshTokenOptions) : ControllerBase
+    public class AccountController(IAuthenticationService authenticationService,IOptions<RecaptchaSecret>RecaptchaSecretOptions,JwtOptions jwtOptions,IOptions<RefreshTokenOptions> refreshTokenOptions) : ControllerBase
     {
         [HttpPost("sign-up")]
         public async Task<IActionResult> SignUp(SignUpDto signUpDto)
         {
+            var validatedRecaptcha = await ValidateRecaptchaAsync(signUpDto.RecaptchaToken, RecaptchaSecretOptions.Value.SecretKey, "signup");
+            if (!validatedRecaptcha) 
+                return BadRequest();
            var result= await authenticationService.SignUpAsync(signUpDto);
            return result.Success? Ok(result) : BadRequest(result);
         }
@@ -43,6 +47,9 @@ namespace Chatify.Controllers
         [HttpPost("login")]
         public async Task<IActionResult>Login(LoginDto loginDto)
         {
+            var resultOfVerifingRecaptcha = await ValidateRecaptchaAsync(loginDto.recaptchaToken,RecaptchaSecretOptions.Value.SecretKey,"login");
+            if (!resultOfVerifingRecaptcha)
+                return NotFound();
             var result=await authenticationService.LoginAsync(loginDto);
             if(result is { Success:true ,EmailConfirmed:true})
             {
@@ -113,6 +120,19 @@ namespace Chatify.Controllers
             }
             return Unauthorized();
             
+        }
+        private async Task<bool> ValidateRecaptchaAsync(string recaptchaToken, string secretKey,string actionName)
+        {
+            var formUrlEncoded = new FormUrlEncodedContent([KeyValuePair.Create("secret",secretKey),KeyValuePair.Create("response",recaptchaToken)]);
+          
+            using var fetcher = new HttpClient();
+            var response=await fetcher.PostAsync($"https://www.google.com/recaptcha/api/siteverify",formUrlEncoded);
+            if (!response.IsSuccessStatusCode)
+                return false;
+            var resultData =await response.Content.ReadFromJsonAsync<RecaptchaResponse>();
+
+            return resultData!.success&&resultData.score>=.5 &&resultData.action==actionName;
+
         }
     }
 }

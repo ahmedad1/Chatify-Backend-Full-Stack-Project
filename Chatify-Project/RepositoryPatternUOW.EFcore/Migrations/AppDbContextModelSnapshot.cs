@@ -80,7 +80,8 @@ namespace RepositoryPattern.EFcore.Migrations
 
                     b.Property<string>("MessageText")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<int>("ReceiverId")
                         .HasColumnType("int");

@@ -79,6 +79,7 @@ namespace RepositoryPatternUOW.EFcore
             modelBuilder.Entity<Message>(x =>
             {
                 x.Property(x => x.IsRead).HasDefaultValue(false);
+                x.Property(x => x.MessageText).HasMaxLength(2000);
             });
         }
 
