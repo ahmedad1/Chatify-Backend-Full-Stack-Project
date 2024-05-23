@@ -11,6 +11,7 @@ using RepositoryPattern.Core.Models;
 using RepositoryPattern.Core.ResultModels;
 using RepositoryPatternUOW.Core.Models;
 using System.IdentityModel.Tokens.Jwt;
+//using System.Text.RegularExpressions;
 
 namespace Chatify.Controllers
 {
@@ -129,10 +130,13 @@ namespace Chatify.Controllers
                         }
                     }
             };
-
             await Task.WhenAll(addToGroup([user1, user2]),
-            unitOfWork.SaveChangesAsync());
 
+            unitOfWork.SaveChangesAsync());
+            if (user1!.UserConnections!.Any())
+               await chatHub.Clients.Group(newGroup).SendAsync("newOneActive", user1.UserName);
+            if (user2.UserConnections!.Any())
+               await chatHub.Clients.Group(newGroup).SendAsync("newOneActive", user2.UserName);
             return Ok();
 
 
@@ -143,7 +147,6 @@ namespace Chatify.Controllers
             var id = int.Parse(JwtHandler.ExtractPayload(Request)[JwtRegisteredClaimNames.NameId].ToString()!);
             var user = await unitOfWork.UserRepository.GetByIdAsync(id);
             searchKey = searchKey.Trim();
-            //last Modification (excepting the friends )
             var users =(await unitOfWork.UserRepository.GetWhere(x => (((x.FirstName + " " + x.LastName).Contains(searchKey)) || x.UserName.Contains(searchKey)) && x.EmailConfirmed == true && x.Id != id&&!x.Groups.Any(g=>g.Users.Any(u=>u.Id==user.Id)), pageNum,null,false,12))
                 .Select(x => new SearchResult() {Id=x.Id,UserName= x.UserName,FirstName= x.FirstName,LastName= x.LastName,GotRequest = false }).ToList();
             unitOfWork.SetLazyLoading(true);

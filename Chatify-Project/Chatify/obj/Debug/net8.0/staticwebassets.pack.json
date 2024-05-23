@@ -29,12 +29,12 @@
       "PackagePath": "staticwebassets\\robots.txt"
     },
     {
-      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.8e46ed7a.css",
-      "PackagePath": "staticwebassets\\static\\css\\main.8e46ed7a.css"
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.ec0a4577.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.ec0a4577.css"
     },
     {
-      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.8e46ed7a.css.map",
-      "PackagePath": "staticwebassets\\static\\css\\main.8e46ed7a.css.map"
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.ec0a4577.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.ec0a4577.css.map"
     },
     {
       "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\453.c69361ea.chunk.js",
@@ -45,16 +45,16 @@
       "PackagePath": "staticwebassets\\static\\js\\453.c69361ea.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.92c480c5.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.92c480c5.js"
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.89d01231.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.89d01231.js"
     },
     {
-      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.92c480c5.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\static\\js\\main.92c480c5.js.LICENSE.txt"
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.89d01231.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.89d01231.js.LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.92c480c5.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.92c480c5.js.map"
+      "Id": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.89d01231.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.89d01231.js.map"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Chatify.Microsoft.AspNetCore.StaticWebAssets.props",

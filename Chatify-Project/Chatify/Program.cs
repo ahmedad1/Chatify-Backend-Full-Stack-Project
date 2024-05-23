@@ -42,7 +42,7 @@ builder.Services.Configure<RefreshTokenOptions>(builder.Configuration.GetSection
 var jwtOptions=builder.Configuration.GetSection("JWT").Get<JwtOptions>();
 builder.Services.AddScoped<IGenerateTokens, GenerateTokens>();
 builder.Services.AddSignalR();
-builder.Services.AddCors();
+//builder.Services.AddCors();
 builder.Services.Configure<RecaptchaSecret>(builder.Configuration.GetSection("RecaptchaSecret"));
 builder.Services.AddSingleton(jwtOptions!);
 builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
@@ -82,7 +82,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors(x => x.WithOrigins("http://localhost:3000").AllowCredentials().AllowAnyHeader().AllowAnyMethod()); ;
+//app.UseCors(x => x.WithOrigins("http://localhost:3000").AllowCredentials().AllowAnyHeader().AllowAnyMethod()); ;
 app.UseAuthorization();
 app.UseMiddleware<RedirectionMiddleware>();
 app.MapHub<ChatHub>("/chat");

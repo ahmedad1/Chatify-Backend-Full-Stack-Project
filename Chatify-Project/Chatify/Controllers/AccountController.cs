@@ -75,7 +75,8 @@ namespace Chatify.Controllers
             cookieOptions.Expires= expirationDate;
             cookieOptions.Secure = hasSecureFlag;
             cookieOptions.HttpOnly = hasHttpOnlyFlag;
-            cookieOptions.SameSite = SameSiteMode.None;
+            //cookieOptions.SameSite = SameSiteMode.None;
+            cookieOptions.SameSite = SameSiteMode.Strict;
             Response.Cookies.Append(key,value,cookieOptions);
             
         }

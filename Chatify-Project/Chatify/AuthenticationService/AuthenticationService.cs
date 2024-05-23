@@ -23,6 +23,8 @@ namespace Chatify.Services
             var refreshToken = generateTokens.GenerateToken();
             unitOfWork.SetLazyLoading(true);
             unitOfWork.UserRepository.Attach(user);
+            if (user.RefreshTokens!.Count() > 5)
+               await unitOfWork.RefreshTokenRepository.ExecuteDeleteAsync(x => x.UserId == user.Id);
             user.RefreshTokens!.Add(new()
             {
                 ExpiresAt = DateTime.Now.AddHours(refreshTokenOptions.Value.ExpiresAfter),
