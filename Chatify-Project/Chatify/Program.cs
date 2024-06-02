@@ -88,6 +88,11 @@ app.UseMiddleware<RedirectionMiddleware>();
 app.MapHub<ChatHub>("/chat");
 app.UseStaticFiles();
 app.UseResponseCompression();
+app.MapGet("/api/ping", () =>
+{
+    return Results.Ok();
+});
 app.MapControllers();
+
 
 app.Run();

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chatify", "Chatify.csproj", "{F878963C-B697-4ED7-829A-4C2AFEDDA4B5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.Core", "..\RepositoryPatternUOW.Core\RepositoryPattern.Core.csproj", "{4891C647-E0CF-4FFB-8DEB-5BD767FC18C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPatternUOW.Core", "..\RepositoryPatternUOW.Core\RepositoryPatternUOW.Core.csproj", "{4891C647-E0CF-4FFB-8DEB-5BD767FC18C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.EFcore", "..\RepositoryPatternUOW.EFcore\RepositoryPattern.EFcore.csproj", "{59804166-37EF-47B6-9C39-E6B8D12BCCB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPatternUOW.EFcore", "..\RepositoryPatternUOW.EFcore\RepositoryPatternUOW.EFcore.csproj", "{59804166-37EF-47B6-9C39-E6B8D12BCCB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

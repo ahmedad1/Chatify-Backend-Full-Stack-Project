@@ -1,0 +1,17 @@
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\bin\Release\net8.0\RepositoryPatternUOW.EFcore.deps.json
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\bin\Release\net8.0\RepositoryPatternUOW.EFcore.runtimeconfig.json
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\bin\Release\net8.0\RepositoryPatternUOW.EFcore.dll
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\bin\Release\net8.0\RepositoryPatternUOW.EFcore.pdb
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\bin\Release\net8.0\RepositoryPatternUOW.Core.dll
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\bin\Release\net8.0\RepositoryPatternUOW.Core.pdb
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.csproj.AssemblyReference.cache
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.AssemblyInfoInputs.cache
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.AssemblyInfo.cs
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.csproj.CoreCompileInputs.cache
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\Reposito.261152A5.Up2Date
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.dll
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\refint\RepositoryPatternUOW.EFcore.dll
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.pdb
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\RepositoryPatternUOW.EFcore.genruntimeconfig.cache
+C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.EFcore\obj\Release\net8.0\ref\RepositoryPatternUOW.EFcore.dll

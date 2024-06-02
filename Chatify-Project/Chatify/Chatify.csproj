@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RepositoryPatternUOW.Core\RepositoryPattern.Core.csproj" />
-    <ProjectReference Include="..\RepositoryPatternUOW.EFcore\RepositoryPattern.EFcore.csproj" />
+    <ProjectReference Include="..\RepositoryPatternUOW.Core\RepositoryPatternUOW.Core.csproj" />
+    <ProjectReference Include="..\RepositoryPatternUOW.EFcore\RepositoryPatternUOW.EFcore.csproj" />
   </ItemGroup>
 
 </Project>

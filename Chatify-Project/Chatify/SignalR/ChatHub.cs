@@ -13,8 +13,11 @@ namespace Chatify.SignalR
         
         public override async Task OnConnectedAsync()
         {
+           
             var userId =int.Parse(JwtHandler.ExtractPayload(Context.GetHttpContext()!.Request)[JwtRegisteredClaimNames.NameId].ToString()!);   
             var user=await unitOfWork.UserRepository.GetByIdAsync(userId);
+            if (user.UserConnections!.Count() > 5)
+                await unitOfWork.UserConnectionRepository.ExecuteDeleteAsync(x => x.UserId == user.Id);
             user!.UserConnections!.Add(new() { ConnectionId = Context.ConnectionId });
             var groups = user.Groups?.Select(x=>new { x.Id ,Users=x.Users.Where(x => x.Id != userId&&x.UserConnections!.Any())?.Select(x=>x.UserName)}).ToList();
             if (groups is not null)
@@ -79,6 +82,7 @@ namespace Chatify.SignalR
             var userName = payload[JwtRegisteredClaimNames.UniqueName].ToString()!;
             await Clients.OthersInGroup(groupId).SendAsync("isTyping", userName);
         }
+      
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             var userId =int.Parse(JwtHandler.ExtractPayload(Context.GetHttpContext()!.Request)[JwtRegisteredClaimNames.NameId].ToString()!);

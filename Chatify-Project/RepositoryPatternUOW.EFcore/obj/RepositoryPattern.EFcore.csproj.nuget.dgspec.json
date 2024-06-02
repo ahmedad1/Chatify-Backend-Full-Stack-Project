@@ -4,12 +4,12 @@
     "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj": {
+    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj",
-        "projectName": "RepositoryPattern.Core",
-        "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
+        "projectName": "RepositoryPatternUOW.Core",
+        "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
         "packagesPath": "C:\\Users\\Infotech\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\obj\\",
         "projectStyle": "PackageReference",
@@ -88,8 +88,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj": {
-                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj"
+              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
+                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj"
               }
             }
           }

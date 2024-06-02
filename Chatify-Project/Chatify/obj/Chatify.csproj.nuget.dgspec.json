@@ -28,11 +28,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj": {
-                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj"
+              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
+                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj"
               },
-              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj": {
-                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj"
+              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj": {
+                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj"
               }
             }
           }
@@ -86,12 +86,12 @@
         }
       }
     },
-    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj": {
+    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj",
-        "projectName": "RepositoryPattern.Core",
-        "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
+        "projectName": "RepositoryPatternUOW.Core",
+        "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
         "packagesPath": "C:\\Users\\Infotech\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\obj\\",
         "projectStyle": "PackageReference",
@@ -146,12 +146,12 @@
         }
       }
     },
-    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj": {
+    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj",
-        "projectName": "RepositoryPattern.EFcore",
-        "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj",
+        "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj",
+        "projectName": "RepositoryPatternUOW.EFcore",
+        "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj",
         "packagesPath": "C:\\Users\\Infotech\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\obj\\",
         "projectStyle": "PackageReference",
@@ -170,8 +170,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj": {
-                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj"
+              "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
+                "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj"
               }
             }
           }

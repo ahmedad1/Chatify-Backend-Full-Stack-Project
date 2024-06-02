@@ -1714,17 +1714,17 @@
           }
         }
       },
-      "RepositoryPattern.Core/1.0.0": {
+      "RepositoryPatternUOW.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/RepositoryPattern.Core.dll": {}
+          "bin/placeholder/RepositoryPatternUOW.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RepositoryPattern.Core.dll": {}
+          "bin/placeholder/RepositoryPatternUOW.Core.dll": {}
         }
       },
-      "RepositoryPattern.EFcore/1.0.0": {
+      "RepositoryPatternUOW.EFcore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1733,14 +1733,14 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.4",
           "Microsoft.EntityFrameworkCore.Proxies": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
-          "RepositoryPattern.Core": "1.0.0",
+          "RepositoryPatternUOW.Core": "1.0.0",
           "Riok.Mapperly": "3.5.0"
         },
         "compile": {
-          "bin/placeholder/RepositoryPattern.EFcore.dll": {}
+          "bin/placeholder/RepositoryPatternUOW.EFcore.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RepositoryPattern.EFcore.dll": {}
+          "bin/placeholder/RepositoryPatternUOW.EFcore.dll": {}
         }
       }
     }
@@ -4700,22 +4700,22 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "RepositoryPattern.Core/1.0.0": {
+    "RepositoryPatternUOW.Core/1.0.0": {
       "type": "project",
-      "path": "../RepositoryPatternUOW.Core/RepositoryPattern.Core.csproj",
-      "msbuildProject": "../RepositoryPatternUOW.Core/RepositoryPattern.Core.csproj"
+      "path": "../RepositoryPatternUOW.Core/RepositoryPatternUOW.Core.csproj",
+      "msbuildProject": "../RepositoryPatternUOW.Core/RepositoryPatternUOW.Core.csproj"
     },
-    "RepositoryPattern.EFcore/1.0.0": {
+    "RepositoryPatternUOW.EFcore/1.0.0": {
       "type": "project",
-      "path": "../RepositoryPatternUOW.EFcore/RepositoryPattern.EFcore.csproj",
-      "msbuildProject": "../RepositoryPatternUOW.EFcore/RepositoryPattern.EFcore.csproj"
+      "path": "../RepositoryPatternUOW.EFcore/RepositoryPatternUOW.EFcore.csproj",
+      "msbuildProject": "../RepositoryPatternUOW.EFcore/RepositoryPatternUOW.EFcore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.4",
-      "RepositoryPattern.Core >= 1.0.0",
-      "RepositoryPattern.EFcore >= 1.0.0",
+      "RepositoryPatternUOW.Core >= 1.0.0",
+      "RepositoryPatternUOW.EFcore >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4746,11 +4746,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj": {
-              "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPattern.Core.csproj"
+            "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
+              "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj"
             },
-            "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj": {
-              "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj"
+            "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj": {
+              "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj"
             }
           }
         }

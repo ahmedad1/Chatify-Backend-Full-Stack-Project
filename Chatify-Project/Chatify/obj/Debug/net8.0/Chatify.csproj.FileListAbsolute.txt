@@ -140,10 +140,10 @@ C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\BouncyCastle.
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\MailKit.dll
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\MimeKit.dll
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\Riok.Mapperly.Abstractions.dll
-C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPattern.Core.dll
-C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPattern.EFcore.dll
-C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPattern.Core.pdb
-C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPattern.EFcore.pdb
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\obj\Debug\net8.0\Chatify.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\Chatify.staticwebassets.runtime.json
+C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPatternUOW.Core.dll
+C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPatternUOW.EFcore.dll
+C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPatternUOW.Core.pdb
+C:\Users\Infotech\Desktop\Chatify-Project\Chatify\bin\Debug\net8.0\RepositoryPatternUOW.EFcore.pdb

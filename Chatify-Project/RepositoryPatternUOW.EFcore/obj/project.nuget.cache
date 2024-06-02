@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W9pEy7KOu+LaPv+Zf3u52kOTF8xsHzEQak1m1oiX5q3dW34KMIcUnQRFZ9SnUqqrIbL5wetvIlsX/2kw474tPg==",
+  "dgSpecHash": "1VYKGUL1We2rkfDzjsl10M1N8ccXF8gmNxoVppRzSSJ4EsG4usi+hxw954TF3xf1QkUd8RTDx8ip6UPKkjU0iA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPattern.EFcore.csproj",
+  "projectFilePath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Infotech\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Infotech\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
