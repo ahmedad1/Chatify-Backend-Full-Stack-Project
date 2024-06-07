@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x/9zsOM+jalk7nxK5hUL+0rmsUR7se4510By8sTc+Mc=",
+  "Hash": "Ccvd/P04X1hhzpkR2ug2zdXI5IkOUvP1uL3VFa/4ZrQ=",
   "Source": "Chatify",
   "BasePath": "_content/Chatify",
   "Mode": "Default",
@@ -226,12 +226,12 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\453.c69361ea.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.26634c28.js",
+      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.e3f6b6f7.js",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
-      "RelativePath": "static/js/main.26634c28.js",
+      "RelativePath": "static/js/main.e3f6b6f7.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -242,15 +242,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.26634c28.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.e3f6b6f7.js"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.26634c28.js.LICENSE.txt",
+      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.e3f6b6f7.js.LICENSE.txt",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
-      "RelativePath": "static/js/main.26634c28.js.LICENSE.txt",
+      "RelativePath": "static/js/main.e3f6b6f7.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -261,15 +261,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.26634c28.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.e3f6b6f7.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.26634c28.js.map",
+      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.e3f6b6f7.js.map",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
-      "RelativePath": "static/js/main.26634c28.js.map",
+      "RelativePath": "static/js/main.e3f6b6f7.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -280,7 +280,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.26634c28.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.e3f6b6f7.js.map"
     }
   ]
 }

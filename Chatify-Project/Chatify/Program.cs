@@ -1,4 +1,5 @@
 using Chatify;
+using Chatify.ApplicationStartUp;
 using Chatify.Services;
 using Chatify.SignalR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -42,6 +43,7 @@ builder.Services.Configure<RefreshTokenOptions>(builder.Configuration.GetSection
 var jwtOptions=builder.Configuration.GetSection("JWT").Get<JwtOptions>();
 builder.Services.AddScoped<IGenerateTokens, GenerateTokens>();
 builder.Services.AddSignalR();
+builder.Services.AddHostedService<HostedService>();
 //builder.Services.AddCors();
 builder.Services.Configure<RecaptchaSecret>(builder.Configuration.GetSection("RecaptchaSecret"));
 builder.Services.AddSingleton(jwtOptions!);
