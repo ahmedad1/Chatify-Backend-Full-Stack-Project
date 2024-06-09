@@ -35,7 +35,7 @@ builder.Services.AddResponseCompression(x =>
     x.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(["application/json","application/xml","text/html","text/js"]);
       
 });
-builder.Services.Configure<BrotliCompressionProviderOptions>(x => x.Level=CompressionLevel.Optimal);
+//builder.Services.Configure<BrotliCompressionProviderOptions>(x => x.Level=CompressionLevel.Optimal);
 builder.Services.AddTransient<IUnitOfWork,UnitOfWork>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<ISenderService, SenderService>();
