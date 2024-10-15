@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {}
+    "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
+    "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
+        "projectUniqueName": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
         "projectName": "RepositoryPatternUOW.Core",
-        "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
+        "projectPath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
         "packagesPath": "C:\\Users\\Infotech\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\obj\\",
+        "outputPath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Infotech\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -6354,11 +6354,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\Chatify.csproj",
+      "projectUniqueName": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\Chatify.csproj",
       "projectName": "Chatify",
-      "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\Chatify.csproj",
+      "projectPath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\Chatify.csproj",
       "packagesPath": "C:\\Users\\Infotech\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\obj\\publish\\win-x86\\",
+      "outputPath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\obj\\publish\\win-x86\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Infotech\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6375,11 +6375,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
-              "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj"
+            "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj": {
+              "projectPath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj"
             },
-            "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj": {
-              "projectPath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj"
+            "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj": {
+              "projectPath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.EFcore\\RepositoryPatternUOW.EFcore.csproj"
             }
           }
         }

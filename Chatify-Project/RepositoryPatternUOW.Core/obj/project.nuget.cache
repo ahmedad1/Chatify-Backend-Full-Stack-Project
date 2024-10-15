@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hgol92nJP4LzWrjXw0kOE7sZPV3/PAmgv91FrZfRisIEZgR4KBzIxuamJf5NldBxWqeAOOPfmrthQHzFzfDLyA==",
+  "dgSpecHash": "E0OtlXqQ011VLVGS3XghqAhqSMFvJSk3e0aOOyEqHjYN4O+IK6ZzotcihhLszmuEzy/ILVmmATNcTkAe8vngRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
+  "projectFilePath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\RepositoryPatternUOW.Core\\RepositoryPatternUOW.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

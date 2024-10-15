@@ -9,3 +9,15 @@ C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\
 C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\refint\RepositoryPatternUOW.Core.dll
 C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.pdb
 C:\Users\Infotech\Desktop\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\ref\RepositoryPatternUOW.Core.dll
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\bin\Release\net8.0\RepositoryPatternUOW.Core.deps.json
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\bin\Release\net8.0\RepositoryPatternUOW.Core.dll
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\bin\Release\net8.0\RepositoryPatternUOW.Core.pdb
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.AssemblyInfoInputs.cache
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.AssemblyInfo.cs
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.csproj.CoreCompileInputs.cache
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.sourcelink.json
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.dll
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\refint\RepositoryPatternUOW.Core.dll
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\RepositoryPatternUOW.Core.pdb
+D:\Chatify-backend-Repo\Chatify-Backend\Chatify-Project\RepositoryPatternUOW.Core\obj\Release\net8.0\ref\RepositoryPatternUOW.Core.dll

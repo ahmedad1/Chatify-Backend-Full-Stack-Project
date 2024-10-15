@@ -86,7 +86,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 //app.UseCors(x => x.WithOrigins("http://localhost:3000").AllowCredentials().AllowAnyHeader().AllowAnyMethod()); ;
 app.UseAuthorization();
-app.UseMiddleware<RedirectionMiddleware>();
 app.MapHub<ChatHub>("/chat");
 app.UseStaticFiles();
 app.UseResponseCompression();
@@ -94,6 +93,7 @@ app.MapGet("/api/ping", () =>
 {
     return Results.Ok();
 });
+app.MapFallbackToFile("index.html");
 app.MapControllers();
 
 

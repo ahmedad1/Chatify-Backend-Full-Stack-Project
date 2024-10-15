@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SgjHuYkOcMuGReP98UwKUaS3PU5KZ+srlZOMYXOczZw=",
+  "Hash": "+hgCPu8jfsO+AHynOw3lZRFFRyvfw25f/1y+GlHztM8=",
   "Source": "Chatify",
   "BasePath": "_content/Chatify",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Chatify\\wwwroot",
       "Source": "Chatify",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\asset-manifest.json",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\asset-manifest.json",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "asset-manifest.json",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\asset-manifest.json"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\favicon.ico",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\index.html",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\index.html",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\logo192.png",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\logo192.png",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "logo192.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\logo192.png"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\logo512.png",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\logo512.png",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "logo512.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\logo512.png"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\manifest.json",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\manifest.json",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "manifest.json",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\manifest.json"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\robots.txt",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\robots.txt",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "robots.txt",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\robots.txt"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.ec0a4577.css",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.ec0a4577.css",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "static/css/main.ec0a4577.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.ec0a4577.css"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.ec0a4577.css.map",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\static\\css\\main.ec0a4577.css.map",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "static/css/main.ec0a4577.css.map",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.ec0a4577.css.map"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\453.c69361ea.chunk.js",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\453.c69361ea.chunk.js",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "static/js/453.c69361ea.chunk.js",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\453.c69361ea.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\453.c69361ea.chunk.js.map",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\453.c69361ea.chunk.js.map",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "static/js/453.c69361ea.chunk.js.map",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\453.c69361ea.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.20810a38.js",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.20810a38.js",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "static/js/main.20810a38.js",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.20810a38.js"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.20810a38.js.LICENSE.txt",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.20810a38.js.LICENSE.txt",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "static/js/main.20810a38.js.LICENSE.txt",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.20810a38.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.20810a38.js.map",
+      "Identity": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\static\\js\\main.20810a38.js.map",
       "SourceId": "Chatify",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\wwwroot\\",
+      "ContentRoot": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\wwwroot\\",
       "BasePath": "_content/Chatify",
       "RelativePath": "static/js/main.20810a38.js.map",
       "AssetKind": "All",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hY/oXPz4vOe3ZFV/TxEuDx3SeyKLp/e0hbF6oqX3uw8Qzq5IgCsi0phBqRD1Ca6jfdgbj18Ode1k1BDykhVSOg==",
+  "dgSpecHash": "bNqMwm0RHBmtdoJIl6cFuL5dJdzj7dZY/9/kcRprQcbQGpObi+vfu1XqoLQfZYZHtOV7tX+6yzV6hC3eMN4l7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Infotech\\Desktop\\Chatify-Project\\Chatify\\Chatify.csproj",
+  "projectFilePath": "D:\\Chatify-backend-Repo\\Chatify-Backend\\Chatify-Project\\Chatify\\Chatify.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Infotech\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Infotech\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
